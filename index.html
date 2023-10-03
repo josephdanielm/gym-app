@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="./jmicon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Gym</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="title">
+            <h1>GY</h1><img src="./jm.svg">
+        </div>
+        <div id="workout-list">
+            <h2 id="day-name">Monday</h2>
+            <ul id="workouts-list">
+                <!-- Your workouts will be added here dynamically -->
+            </ul>
+            <div class="button-container">
+                <button id="complete-button" disabled>End Day</button>
+                <button id="reset-button" style="display: none;">Reset Week</button>
+            </div>
+            <div id="congratulations" style="display: none;">
+                <h2>The week is over. You did that.</h2>
+                <button id="reset-week-button">Reset Week</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

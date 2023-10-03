@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600&display=swap');
+
+/* Define custom color variables */
+:root {
+    /* Primary */
+    --rich-black: rgb(2, 27, 26);
+    --dark-green: rgb(3, 34, 33);
+    --bangladesh-green: rgb(3, 98, 76);
+    --mountain-meadow: rgb(44, 194, 149);
+    --caribbean-green: rgb(0, 123, 129);
+    --anti-flash-white: rgb(241, 247, 246);
+
+    /* Secondary */
+    --pine: rgb(6, 48, 43);
+    --basil: rgb(11, 69, 58);
+    --forest: rgb(9, 85, 68);
+    --frog: rgb(23, 135, 109);
+    --mint: rgb(47, 169, 140);
+
+    /* Neutral */
+    --stone: rgb(112, 125, 125);
+    --pistachio: rgb(170, 203, 196);
+}
+
+/* Reset some default styles */
+body,
+h1,
+h2,
+ul,
+li,
+button {
+    margin: 0;
+    padding: 0;
+}
+
+/* Set background color and text color using custom variables */
+body {
+    background-color: var(--rich-black);
+    color: var(--anti-flash-white);
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    padding: 0 15px;
+}
+
+/* Center the content on the page */
+.container {
+    max-width: 400px;
+    height: 85vh;
+    margin: 0 auto;
+    text-align: left;
+    padding: 15px;
+    box-sizing: border-box;
+    background-color: var(--rich-black);
+    /* Customize the content background color */
+    border-radius: 8px;
+    /* Add rounded corners to the content container */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    /* Add a subtle box shadow */
+}
+
+.title {
+    display: flex;
+}
+
+/* Style the heading */
+h1 {
+    font-size: 100px;
+    font-weight: 400;
+    letter-spacing: -10px;
+    /* Customize the heading font size */
+    margin-bottom: 10px;
+    color: var(--bangladesh-green);
+    /* Customize the heading text color */
+}
+
+img {
+    width: 86px;
+    margin-top: 24px;
+    margin-left: -5px;
+}
+
+/* Style the subheading */
+h2 {
+    font-size: 40px;
+    /* Customize the subheading font size */
+    font-weight: 400;
+    text-decoration: underline var(--mountain-meadow);
+    -webkit-text-decoration-line: underline;
+    text-decoration-line: underline;
+    -webkit-text-decoration-color: var(--mountain-meadow);
+    text-decoration-color: var(--mountain-meadow);
+    -webkit-text-decoration-style: solid;
+    text-decoration-style: solid;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    color: var(--anti-flash-white);
+    /* Customize the subheading text color */
+}
+
+/* Style the workout list */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin: 20px 0;
+    font-size: 18px;
+    font-weight: 500;
+    display: flex;
+    color: var(--anti-flash-white);
+}
+
+/* Style the checkboxes for Safari */
+/* Reset default styles */
+input[type="checkbox"] {
+    -webkit-appearance: none;
+    /* Remove Safari default appearance */
+    flex-shrink: 0;
+    appearance: none;
+    border: 2px solid var(--mountain-meadow);
+    /* Customize checkbox border color */
+    width: 24px;
+    /* Customize checkbox width */
+    height: 24px;
+    /* Customize checkbox height */
+    border-radius: 4px;
+    /* Add rounded corners to the checkbox */
+    margin-right: 10px;
+    /* Adjust spacing between checkbox and label */
+    position: relative;
+    cursor: pointer;
+}
+
+/* Style the checked state for Safari */
+input[type="checkbox"]:checked::before {
+    content: '';
+    /* Use a checkmark symbol or any other character you prefer */
+    display: inline-block;
+    width: 21px;
+    /* Match the checkbox width */
+    height: 21px;
+    /* Match the checkbox height */
+    line-height: 14px;
+    /* Center the checkmark vertically */
+    text-align: center;
+    background-color: var(--mountain-meadow);
+    /* Customize the checked background color */
+    color: var(--anti-flash-white);
+    /* Customize the checked checkmark color */
+    font-size: 14px;
+    /* Customize the checkmark font size */
+    border-radius: 0px;
+    /* Add rounded corners to the checkmark */
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateY(0.0px);
+    /* Adjust vertical positioning for Safari */
+}
+
+/* Style the buttons */
+.button-container {
+    display: flex;
+    margin-top: 30px;
+}
+
+.button-container button {
+    padding: 10px 20px;
+    /* Customize the button padding */
+    font-size: 22px;
+    /* Customize the button font size */
+    background-color: var(--mountain-meadow);
+    /* Customize the button background color */
+    border: 2px solid var(--mountain-meadow);
+    color: var(--anti-flash-white);
+    /* Customize the button text color */
+    border-radius: 4px;
+    /* Add rounded corners to the buttons */
+    cursor: pointer;
+}
+
+.button-container button:disabled {
+    background-color: transparent;
+    border: 2px solid var(--bangladesh-green);
+    color: var(--mountain-meadow);
+    border-radius: 4px;
+    /* Customize the disabled button background color */
+    cursor: not-allowed;
+}
+
+/* Style the congratulations message */
+#congratulations {
+    margin-top: -32px;
+    display: none;
+}
+
+#congratulations h2 {
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 700;
+    /* Customize the congratulations message font size */
+    color: var(--mountain-meadow);
+    /* Customize the congratulations message text color */
+}
+
+#reset-week-button {
+    padding: 10px 20px;
+    /* Customize the button padding */
+    font-size: 22px;
+    background-color: var(--basil);
+    border: 2px solid var(--pistachio);
+    color: var(--anti-flash-white);
+    /* Customize the button text color */
+    border-radius: 4px;
+    /* Add rounded corners to the buttons */
+    cursor: pointer;
+    margin-top: -20px;
+}
